@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+		xmlns:gap   = "http://phonegap.com/ns/1.0"
+		id	    = "tw.whatmake.shinjia.p5app.s003"
+		versionCode = "2" 
+		version     = "0.1.1" >
+ 
+	<name>p5app S003</name>
+ 
+	<description>
+		瞄準射擊
+	</description>
+ 
+	<author href="https://github.com/shinjia/p5app" email="shinjia168@gmail.com">
+		Shinjia
+	</author>
+	
+	<icon src="icon_512x512.png" />
+	
+	<!-- current version of PhoneGap -->
+	
+	<preference name='phonegap-version' value='cli-6.5.0' />
+	
+	<!-- 設定畫面固定為水平(landscape)、垂直(portrait) -->
+	<preference name="orientation" value="all" />
+
+	<!-- 加入其它plugin設定 -->
+	<platform name="android">
+    	<preference name="android-targetSdkVersion" value="26" />
+	</platform>
+	
+</widget>
