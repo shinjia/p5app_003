@@ -2,8 +2,8 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
 		xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id	    = "tw.whatmake.shinjia.p5app.s003"
-		versionCode = "3" 
-		version     = "0.1.2" >
+		versionCode = "4" 
+		version     = "0.2.0" >
  
 	<name>p5app_003</name>
  
@@ -22,7 +22,7 @@
 	<preference name='phonegap-version' value='cli-6.5.0' />
 	
 	<!-- 設定畫面固定為水平(landscape)、垂直(portrait) -->
-	<preference name="orientation" value="all" />
+	<preference name="orientation" value="portrait" />
 
 	<!-- 加入其它plugin設定 -->
 	<platform name="android">

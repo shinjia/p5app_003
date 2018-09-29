@@ -5,10 +5,12 @@ var br;  // ball radius
 var score = 0;
 var lose = 0;
 
+var prev = false;  // 是否已有前次資料
+var prev_bx, prev_by, prev_hx, prev_hy;  // 記錄前次點擊的位置 (ball, hit)
 
 function setup()
 {
-  createCanvas(innerWidth, innerHeight);
+  createCanvas(windowWidth, windowHeight);
   background(80, 120, 90);
   
   init();
@@ -44,6 +46,18 @@ function draw()
   
   background(80, 120, 90);
   
+  // 顯示前次的點擊
+  if(prev)
+  {
+    noFill();
+    stroke(200, 0, 0);
+    ellipse(prev_bx, prev_by, br*2, br*2);
+    
+    stroke(200, 200, 0);
+    line(prev_hx-br, prev_hy, prev_hx+br, prev_hy);
+    line(prev_hx, prev_hy-br, prev_hx, prev_hy+br);
+  }
+  
   noStroke();
   fill(255, 255, 0);
   ellipse(x, y, br*2, br*2);
@@ -64,6 +78,13 @@ function draw()
 
 function mousePressed()
 {
+  // 記錄點擊位置
+  prev = true;
+  prev_hx = mouseX;
+  prev_hy = mouseY;
+  prev_bx = x;
+  prev_by = y;
+  
   // 檢查是否抓到
   if(dist(mouseX, mouseY, x, y)<br)
   {
@@ -72,7 +93,7 @@ function mousePressed()
   }
   else
   {
-      lose++;    
+     lose++;    
   }
   return false;
 }
