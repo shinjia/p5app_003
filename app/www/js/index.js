@@ -63,10 +63,12 @@ function draw()
   ellipse(x, y, br*2, br*2);
   
   // 加入滑鼠位置
+  /*
   stroke(255);
   line(mouseX-br, mouseY, mouseX+br, mouseY);
   line(mouseX, mouseY-br, mouseX, mouseY+br);
-  
+  */
+ 
   // 顯示分數
   stroke(255, 0, 0);
   fill(255);
